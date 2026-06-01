@@ -1,0 +1,1097 @@
+/* ─── COLOR VARIABLES & THEME CONFIG ─── */
+/* Configured directly from the yogü UI design specs */
+:root {
+    --bg-yogurt-cream: #f9f4ee;   /* Soft, warm cream background */
+    --brand-orange: #d85a2b;       /* Signature yogü accent orange */
+    --hover-orange: #bd481d;       /* Darker tone for active interactive states */
+    --text-main: #3c2f2f;          /* Gentle off-black/dark espresso text */
+    --text-muted: #8c7e7a;         /* Secondary descriptive text color */
+    --card-bg: #fcfbfa;            /* Pristine soft white for product cards */
+    --badge-best: #fbece5;         /* Soft light orange highlight tint */
+    --font-heading: 'Plus Jakarta Sans', sans-serif; /* Modern, clean, rounded feel */
+    --font-body: 'DM Sans', sans-serif; /* Simple, legible body font with a friendly tone */
+}
+
+html {
+    scroll-behavior: smooth;
+    /* Adjust this offset values if you have a sticky navbar at the very top of your site */
+    scroll-padding-top: 40px; 
+}
+
+/* Subtle hover lifting effect for the menu cards */
+.menu-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.menu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(92, 64, 51, 0.08) !important;
+}
+
+/* ─── GENERAL STYLES ─── */
+body {
+    background-color: var(--bg-yogurt-cream);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    overflow-x: hidden;
+}
+
+/* ─── PILL & ROUNDED EDGES (YOGÜ BRAND IDENTITY) ─── */
+/* Replaces Savoréa's flat edges with smooth, organic radii from the reference image */
+.btn-pill, .nav-order-btn, .promo-wrapper {
+    border-radius: 50px !important; 
+}
+
+.product-card {
+    border-radius: 18px !important;
+    overflow: hidden;
+    background-color: var(--card-bg);
+    border: none !important;
+    padding: 1.5rem 1rem;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(216, 90, 43, 0.08);
+}
+
+/* ─── NAVIGATION BAR ─── */
+.navbar-custom {
+    background-color: rgba(249, 244, 238, 0.9);
+    border-bottom: none;
+    backdrop-filter: blur(12px);
+}
+
+.brand-title {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    color: var(--brand-orange);
+    font-size: 1.8rem;
+    letter-spacing: -0.5px;
+}
+
+.navbar-custom .nav-link {
+    color: var(--text-main);
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-transform: capitalize; /* Nonchalant, modern menu text style */
+    padding: 0.5rem 1.2rem !important;
+    transition: color 0.2s ease;
+}
+
+.navbar-custom .nav-link:hover, 
+.navbar-custom .nav-link.active {
+    color: var(--brand-orange);
+}
+
+/* ─── BUTTONS & INTERACTIVES ─── */
+.btn-primary {
+    background-color: var(--brand-orange);
+    border: none;
+    color: #fff;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 0.6rem 1.5rem;
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover, .btn-primary:active {
+    background-color: #b95e22 !important;
+    transform: scale(1.02);
+}
+
+/* ─── HERO & DESIGN ASSETS ─── */
+.hero-section {
+    position: relative;
+    padding: 4rem 0 6rem 0;
+    background: var(--bg-yogurt-cream);
+}
+
+/* Abstract wave container styling */
+.hero-wave-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.hero-heading {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    color: var(--brand-orange);
+    line-height: 1.1;
+}
+
+/* Best Seller Tags */
+.best-seller-badge {
+    background-color: var(--badge-best);
+    color: var(--brand-orange);
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    display: inline-block;
+}
+
+/* Add-to-cart Accent Button */
+.btn-add-item {
+    background: #fdfaf7;
+    border: 1px solid rgba(218, 90, 43, 0.15);
+    color: var(--brand-orange);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-add-item:hover {
+    background: var(--brand-orange);
+    color: #fff;
+}
+
+/* ─── SPECIFIC COMPONENT WRAPPERS ─── */
+.promo-wrapper {
+    background-color: #fff;
+    border: 1px solid rgba(216, 90, 43, 0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.product-price-style {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--brand-orange);
+    font-size: 1.1rem;
+}
+
+.promo-box {
+    border: 1px dashed #d1b49a; /* The exact tan dashed border */
+    background-color: #fcf6f4;   /* Keeps the solid white background */
+}
+
+.stats-grid {
+    border: 1px solid #d1b49a; /* The exact tan solid border */
+    background-color: #f7ede2; /* Soft cream brand background */
+    padding: 40px 0;
+    margin: 40px 0;
+}
+
+.map-wrapper iframe {
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* 3. Locations Split Layout */
+.locations-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    padding-bottom: 60px;
+}
+
+.hero-content h2 {
+    color: #d96b27; /* Matching your brand orange */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.locations-section {
+    background-color: #fdf7f2; /* Soft, warm brand cream */
+}
+
+/* Global Reset and Body Background styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f6eee5;
+    color: #4a2c11;
+}
+
+/* Fix: Horizontal Navigation Bar Styling */
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(74, 44, 17, 0.05);
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-logo {
+    height: 45px;
+    display: block;
+    object-fit: contain;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #8c7662;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+}
+
+.nav-links a:hover, 
+.nav-links a.active {
+    color: #ffffff;
+    background-color: #d96b27;
+}
+
+/* Central Card Box Layout */
+.cart-container {
+    max-width: 550px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 4px 24px rgba(74, 44, 17, 0.04);
+    box-sizing: border-box;
+}
+
+.page-title {
+    font-size: 28px;
+    text-align: center;
+    margin: 0 0 8px 0;
+}
+
+.page-subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: #8c7662;
+    margin: 0 0 35px 0;
+}
+
+/* Individual Cart Item Line styling */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #f3eae1;
+}
+
+.item-name {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+}
+
+/* Sweetness Dropdown Selector Custom styling */
+.sweetness-selector {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.sweetness-selector label {
+    font-size: 13px;
+    color: #8c7662;
+    font-weight: 500;
+}
+
+.sweetness-selector select {
+    padding: 4px 10px;
+    border-radius: 6px;
+    border: 1px solid #e2d4c9;
+    background-color: #faf6f2;
+    color: #4a2c11;
+    font-size: 13px;
+    cursor: pointer;
+    outline: none;
+}
+
+.sweetness-selector select:focus {
+    border-color: #d96b27;
+}
+
+.item-price {
+    margin: 0;
+    font-weight: 600;
+    font-size: 16px;
+    color: #d96b27;
+}
+
+/* Quantity Button Controls */
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #faf6f2;
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+.qty-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #d96b27;
+    cursor: pointer;
+    padding: 0 4px;
+}
+
+.qty-number {
+    font-size: 14px;
+    font-weight: 600;
+    min-width: 14px;
+    text-align: center;
+}
+
+/* Input Fields & Forms Layout */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 5px;
+}
+
+.form-group-row .form-group {
+    flex: 1;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #4a2c11;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #e2d4c9;
+    border-radius: 12px;
+    background-color: #faf6f2;
+    font-family: inherit;
+    font-size: 14px;
+    color: #4a2c11;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #bfaea0;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #d96b27;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Calculations Summary Panel */
+.cart-summary {
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #725c48;
+}
+
+.total-row {
+    font-size: 18px;
+    font-weight: bold;
+    color: #4a2c11;
+    border-top: 2px dashed #f3eae1;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+/* Checkout Button style */
+.checkout-btn {
+    width: 100%;
+    background-color: #d96b27;
+    color: #ffffff;
+    border: none;
+    padding: 16px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.checkout-btn:hover {
+    background-color: #be5a1c;
+}
+
+/* Footer Section */
+.cart-footer {
+    text-align: center;
+    margin: 40px 0 20px 0;
+    font-size: 12px;
+    color: #8c7662;
+}
+
+/* Global Reset and Theme Coloring matching the YOGU ecosystem */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f6eee5;
+    color: #4a2c11;
+    overflow-x: hidden;
+}
+
+/* Navbar Global Styling Adjustments */
+.navbar-custom .nav-link {
+    color: #8c7662;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 8px 16px !important;
+    transition: color 0.2s ease;
+}
+
+.navbar-custom .nav-link:hover {
+    color: #D36B27;
+}
+
+/* Hero Section Inspo Layout */
+.about-hero {
+    background-color: #F3EBE1;
+    padding: 80px 0 100px 0;
+    position: relative;
+}
+
+.hero-badge {
+    display: inline-block;
+    color: #D36B27;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.hero-title {
+    color: #4a2c11;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    color: #725c48;
+    line-height: 1.7;
+    font-size: 18px;
+}
+
+/* Image Presentation with Circular Abstract Accents */
+.hero-image-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-top: 40px;
+}
+
+@media (min-width: 992px) {
+    .hero-image-wrapper {
+        margin-top: 0;
+    }
+}
+
+.brand-accent-circle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #e5dacd;
+    border-radius: 50%;
+    top: -20px;
+    left: 20px;
+    z-index: 1;
+}
+
+.hero-img {
+    position: relative;
+    z-index: 2;
+    width: 380px;
+    height: 380px;
+    object-fit: cover;
+    border: 8px solid #ffffff;
+}
+
+/* Brand Section Titles and Layout Details */
+.max-w-700 {
+    max-width: 700px;
+}
+
+.section-title {
+    color: #4a2c11;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.title-divider {
+    width: 60px;
+    height: 3px;
+    background-color: #D36B27;
+    border-radius: 2px;
+    margin-top: 15px;
+}
+
+.section-desc {
+    color: #725c48;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Cards block styled for Core Pillars */
+.value-card {
+    padding: 35px 25px;
+    background-color: #faf6f2;
+    border-radius: 20px;
+    border: 1px solid #f0e4d8;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(74, 44, 17, 0.05);
+}
+
+.icon-box {
+    width: 60px;
+    height: 60px;
+    background-color: #D36B27;
+    color: #ffffff;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin: 0 auto 20px auto;
+}
+
+.value-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #4a2c11;
+    margin-bottom: 12px;
+}
+
+.value-card p {
+    font-size: 14px;
+    color: #8c7662;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Call To Action Block Design Elements */
+.about-cta {
+    background: linear-gradient(rgba(211, 107, 39, 0.92), rgba(190, 90, 28, 0.95)), 
+                url('https://images.unsplash.com/photo-1541658016709-82535e94bc69?q=80&w=1200&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+}
+
+.opacity-90 {
+    opacity: 0.9;
+}
+
+/* Fine-tuned Footer Divider styling */
+.about-footer {
+    border-top: 1px solid #f3eae1;
+}
+
+/* Simple Entrance Keyframes Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+/* Global Reset and Theme Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f6eee5;
+    color: #4a2c11;
+}
+
+/* Navbar compatibility overrides */
+.navbar-custom .nav-link {
+    color: #8c7662;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 8px 16px !important;
+    transition: color 0.2s ease;
+}
+
+.navbar-custom .nav-link:hover {
+    color: #D36B27;
+}
+
+/* Reviews Panel Styles */
+.sub-badge {
+    display: inline-block;
+    color: #D36B27;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.section-main-title {
+    color: #4a2c11;
+}
+
+.title-divider {
+    width: 50px;
+    height: 3px;
+    background-color: #D36B27;
+    border-radius: 2px;
+}
+
+.review-card {
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    border: 1px solid #f3eae1;
+    box-shadow: 0 4px 20px rgba(74, 44, 17, 0.02);
+    height: 100%;
+}
+
+.stars {
+    color: #ffc107;
+}
+
+.review-text {
+    color: #725c48;
+    font-size: 15px;
+    line-height: 1.6;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.reviewer-name {
+    color: #4a2c11;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Form Layout Container Blocks */
+.contact-card-wrapper {
+    max-width: 900px;
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 10px 40px rgba(74, 44, 17, 0.05);
+    overflow: hidden;
+    border: 1px solid #f3eae1;
+}
+
+/* Sidebar Informative styling block */
+.contact-info-sidebar {
+    background: linear-gradient(135deg, #D36B27, #be5a1c);
+}
+
+.contact-info-sidebar strong {
+    font-size: 15px;
+}
+
+/* Form Inputs Custom Styling */
+.form-element {
+    margin-bottom: 15px;
+}
+
+.form-element label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #4a2c11;
+}
+
+.form-element input,
+.form-element textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #e2d4c9;
+    border-radius: 12px;
+    background-color: #faf6f2;
+    font-family: inherit;
+    font-size: 14px;
+    color: #4a2c11;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.form-element input::placeholder,
+.form-element textarea::placeholder {
+    color: #bfaea0;
+}
+
+.form-element input:focus,
+.form-element textarea:focus {
+    border-color: #D36B27;
+}
+
+.form-element textarea {
+    resize: none;
+}
+
+/* Submission Button Style override */
+.send-msg-btn {
+    width: 100%;
+    background-color: #D36B27;
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.send-msg-btn:hover {
+    background-color: #be5a1c;
+}
+
+/* Custom Styles for the Landing Page Reviews Carousel */
+.review-badge {
+    color: #D36B27;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 2px;
+    display: inline-block;
+}
+
+.review-title-divider {
+    width: 60px;
+    height: 3px;
+    background-color: #D36B27;
+    border-radius: 2px;
+    margin-top: 10px;
+}
+
+/* Review Card Design Adjustments */
+.yogu-review-card {
+    border: 1px solid #f3eae1 !important;
+    min-height: 220px;
+}
+
+/* Custom Dots Styling for Carousel */
+.custom-indicator {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50% !important;
+    background-color: #8c7662 !important;
+    opacity: 0.3 !important;
+    border: none !important;
+    margin: 0 6px !important;
+    transition: all 0.2s ease !important;
+}
+
+.custom-indicator.active {
+    background-color: #D36B27 !important;
+    opacity: 1 !important;
+    transform: scale(1.2);
+}
+
+/* Elegant Theme-friendly "View More" Button Link */
+.view-more-reviews-btn {
+    display: inline-block;
+    color: #D36B27;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 10px 24px;
+    border: 2px solid #D36B27;
+    border-radius: 25px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.view-more-reviews-btn:hover {
+    color: #ffffff;
+    background-color: #D36B27;
+    box-shadow: 0 4px 15px rgba(211, 107, 39, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Enhanced Review Styling additions */
+.review-card {
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    border: 1px solid #f3eae1;
+    box-shadow: 0 4px 20px rgba(74, 44, 17, 0.02);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Keeps author section perfectly aligned at the bottom */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(74, 44, 17, 0.06);
+}
+
+/* Stylish Initials Circle Avatar */
+.avatar-circle {
+    width: 36px;
+    height: 36px;
+    background-color: #f6eee5;
+    color: #D36B27;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.reviewer-name {
+    color: #4a2c11;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+/* Custom Review Tabs Styling */
+.review-tabs .nav-link {
+    background: transparent;
+    color: #8c7662;
+    border: 2px solid #e2d4c9;
+    font-weight: 600;
+    margin: 0 5px;
+    padding: 10px 24px;
+    border-radius: 25px;
+    transition: all 0.2s ease;
+}
+
+.review-tabs .nav-link:hover {
+    color: #D36B27;
+    border-color: #D36B27;
+}
+
+.review-tabs .nav-link.active {
+    background-color: #D36B27 !important;
+    border-color: #D36B27 !important;
+    color: #ffffff !important;
+}
+
+/* Submit Review Layout Width */
+.write-review-container {
+    max-width: 700px;
+    border: 1px solid #f3eae1;
+}
+
+/* Clever CSS-only Interactive Star Ratings system */
+.interactive-stars {
+    display: flex;
+    flex-direction: row-reverse; /* Reverses order so CSS general sibling selector (~) works right-to-left */
+    justify-content: flex-end;
+    gap: 6px;
+}
+
+.interactive-stars label {
+    font-size: 26px;
+    color: #e2d4c9; /* Gray star default shadow status */
+    cursor: pointer;
+    transition: color 0.15s ease;
+}
+
+/* Highlight stars on hover or when checked */
+.interactive-stars input:checked ~ label,
+.interactive-stars label:hover,
+.interactive-stars label:hover ~ label {
+    color: #ffc107; /* Bright gold star status */
+}
+
+/* Static Title Heading Next to the Logo */
+.brand-heading {
+    font-size: 26px;
+    font-weight: 800;          /* Matching your preferred extra bold weights */
+    color: #D36B27;             /* Brand theme orange color accent */
+    letter-spacing: -0.5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Creates a clean, premium arched mask directly over the image box area */
+.yogu-image-arch-wrapper {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    
+    /* This creates a perfectly smooth arched storefront curvature at the top corners */
+    border-radius: 240px 240px 20px 20px;
+    
+    /* Optional: Adds a soft subtle border frame around the arch to give it depth */
+    border: 4px solid #F3EBE1; 
+}
+
+/* Custom Organic Blob Mask for the Story Image */
+.yogu-blob-wrapper {
+    width: 100%;
+    max-width: 380px; /* Limits the size perfectly for a balanced layout */
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    display: block;
+    
+    /* Creates a beautiful asymmetrical organic liquid fluid shape */
+    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+    
+    /* Subtle theme-colored border to make the frame look intentional */
+    border: 5px solid #F3EBE1;
+    box-shadow: 0 8px 24px rgba(74, 44, 17, 0.04);
+}
+
+/* Ensure the image stretches properly to fill the organic shape entirely */
+.yogu-blob-wrapper .process-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Custom Stylish Promo Cards */
+.yogu-promo-card {
+    background-color: #FFFDF9;
+    border: 1px solid #e9decb;
+    
+    /* Elegant fluid corner smoothing instead of boring standard box corners */
+    border-radius: 40px 24px 40px 24px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Subtle interactive lift on mouse over */
+.yogu-promo-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(74, 44, 17, 0.04);
+}
+
+/* Clean circular container badges for your icons */
+.promo-icon-wrapper {
+    width: 55px;
+    height: 55px;
+    background-color: #f6eee5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.promo-icon-wrapper i {
+    font-size: 24px;
+    color: #D36B27; /* Rich theme orange color */
+}
+
+/* PRODUCT CARD SAME SIZE */
+.menu-card{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #FFFDF9;
+    border-radius: 24px;
+    box-shadow: 0 4px 12px rgba(92,64,51,0.03);
+    transition: 0.2s ease;
+}
+
+/* IMAGE SAME SIZE */
+.menu-card img{
+    height: 160px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+/* CONTENT AREA */
+.menu-card .text-center{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* TITLE SAME HEIGHT */
+.menu-card h6{
+    min-height: 50px;
+}
+
+/* DESCRIPTION SAME HEIGHT */
+.menu-card p{
+    min-height: 45px;
+}
+
+/* BUTTON STYLE */
+.add-btn{
+    width: 32px;
+    height: 32px;
+    background-color: #F5ECE4;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #5C4033;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+/* BUTTON HOVER */
+.add-btn:hover{
+    background-color: #D36B27 !important;
+    color: white !important;
+    transform: scale(1.08);
+}

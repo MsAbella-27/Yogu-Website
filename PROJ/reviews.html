@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOGU | Reviews & Contact</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top navbar-custom" style="background-color: #F3EBE1;">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="YogoLogo.png" alt="yogu logo" style="height: 55px; width: auto;">
+            </a>
+            <span class="brand-heading">yogu</span>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="reviews.html" style="color: #D36B27; font-weight: 700;">Reviews</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-primary px-4 py-2" href="order.html" style="background-color: #D36B27; border: none; border-radius: 25px; font-weight: 600;">
+                            Cart <i class="bi bi-basket3-fill ms-1"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="reviews-section py-5">
+        <div class="container my-4">
+            <div class="text-center mb-4">
+                <span class="sub-badge">Fan Favorites</span>
+                <h2 class="fw-bold mb-2 section-main-title">What Yogu Lovers Are Saying</h2>
+            </div>
+
+            <ul class="nav nav-pills justify-content-center mb-5 review-tabs" id="reviewTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="view-reviews-tab" data-bs-toggle="tab" data-bs-target="#view-reviews" type="button" role="tab" aria-controls="view-reviews" aria-selected="true">
+                        <i class="bi bi-chat-left-heart me-2"></i>Customer Reviews
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="write-review-tab" data-bs-toggle="tab" data-bs-target="#write-review" type="button" role="tab" aria-controls="write-review" aria-selected="false">
+                        <i class="bi bi-pencil-square me-2"></i>Write A Review
+                    </button>
+                </li>
+            </ul>
+
+            <div class="tab-content" id="reviewTabContent">
+                
+                <div class="tab-pane fade show active" id="view-reviews" role="tabpanel" aria-labelledby="view-reviews-tab">
+                    <div class="row g-4 text-start">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="review-card">
+                                <div class="stars mb-3">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                </div>
+                                <p class="review-text">"The Brown Sugar Yogurt is the perfect balance of creamy and sweet. Not too heavy, just right for a midday treat!"</p>
+                                <div class="reviewer-info d-flex align-items-center mt-3">
+                                    <div class="avatar-circle">MK</div>
+                                    <h6 class="reviewer-name mb-0 ms-2">Maria K.</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="review-card">
+                                <div class="stars mb-3">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                </div>
+                                <p class="review-text">"I love that you can customize the sweetness level. The 50% sweetness option lets the natural yogurt taste shine through perfectly."</p>
+                                <div class="reviewer-info d-flex align-items-center mt-3">
+                                    <div class="avatar-circle">JD</div>
+                                    <h6 class="reviewer-name mb-0 ms-2">Justin D.</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="review-card">
+                                <div class="stars mb-3">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                </div>
+                                <p class="review-text">"Super fast ordering process and the packaging arrived perfectly chilled. Will definitely make this my regular weekend habit."</p>
+                                <div class="reviewer-info d-flex align-items-center mt-3">
+                                    <div class="avatar-circle">AV</div>
+                                    <h6 class="reviewer-name mb-0 ms-2">Alyson V.</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                    <div class="review-card">
+                        <div class="stars mb-3">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="review-text">"The real fruit bits inside the strawberry yogurt flavor feel so fresh! It tastes authentic and premium, completely miles ahead of regular powders."</p>
+                        <div class="reviewer-info d-flex align-items-center mt-3">
+                            <div class="avatar-circle">MS</div>
+                            <h6 class="reviewer-name mb-0 ms-2">Megan S.</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="review-card">
+                        <div class="stars mb-3">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="review-text">"Tried the matcha yogurt combination on a whim and it blew me away! The earthy matcha tones down the tanginess beautifully."</p>
+                        <div class="reviewer-info d-flex align-items-center mt-3">
+                            <div class="avatar-circle">KB</div>
+                            <h6 class="reviewer-name mb-0 ms-2">Kevin B.</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="review-card">
+                        <div class="stars mb-3">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="review-text">"Super convenient packaging layout for bringing to work. They stay cool in my office desk bag for hours. My new go-to healthy break option!"</p>
+                        <div class="reviewer-info d-flex align-items-center mt-3">
+                            <div class="avatar-circle">DL</div>
+                            <h6 class="reviewer-name mb-0 ms-2">Danica L.</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="review-card">
+                        <div class="stars mb-3">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="review-text">"I highly recommend adding the purple rice topping! It provides this amazing chewy contrast that turns a quick drink into a satisfying snack."</p>
+                        <div class="reviewer-info d-flex align-items-center mt-3">
+                            <div class="avatar-circle">JM</div>
+                            <h6 class="reviewer-name mb-0 ms-2">James M.</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="review-card">
+                        <div class="stars mb-3">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="review-text">"Excellent customer service team! I input the incorrect delivery floor dropdown during checkout and they corrected my rider routing instantly via chat."</p>
+                        <div class="reviewer-info d-flex align-items-center mt-3">
+                            <div class="avatar-circle">VT</div>
+                            <h6 class="reviewer-name mb-0 ms-2">Vanessa T.</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="review-card">
+                        <div class="stars mb-3">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                        <p class="review-text">"Perfect option for hot summer afternoons. It fills you up nicely without leaving you feeling sluggish or bloated like heavy boba drinks do."</p>
+                        <div class="reviewer-info d-flex align-items-center mt-3">
+                            <div class="avatar-circle">HG</div>
+                            <h6 class="reviewer-name mb-0 ms-2">Harvey G.</h6>
+                        </div>
+                    </div>
+                </div>
+                        </div>
+                </div>
+
+                <div class="tab-pane fade" id="write-review" role="tabpanel" aria-labelledby="write-review-tab">
+                    <div class="write-review-container mx-auto p-4 p-md-5 rounded-4 bg-white text-start shadow-sm">
+                        <h4 class="fw-bold mb-2" style="color: #4a2c11;">Share Your Yogu Experience</h4>
+                        <p class="text-muted small mb-4">Your email address will not be published publicly.</p>
+                        
+                        <form action="#" method="POST">
+                            <div class="mb-4">
+                                <label class="fw-bold d-block mb-2" style="font-size: 14px; color: #4a2c11;">Your Rating *</label>
+                                <div class="interactive-stars">
+                                    <input type="radio" id="star5" name="rating" value="5" class="d-none"><label for="star5" class="bi bi-star-fill"></label>
+                                    <input type="radio" id="star4" name="rating" value="4" class="d-none"><label for="star4" class="bi bi-star-fill"></label>
+                                    <input type="radio" id="star3" name="rating" value="3" class="d-none"><label for="star3" class="bi bi-star-fill"></label>
+                                    <input type="radio" id="star2" name="rating" value="2" class="d-none"><label for="star2" class="bi bi-star-fill"></label>
+                                    <input type="radio" id="star1" name="rating" value="1" class="d-none"><label for="star1" class="bi bi-star-fill"></label>
+                                </div>
+                            </div>
+
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-element">
+                                        <label for="review-name">Your Name *</label>
+                                        <input type="text" id="review-name" required placeholder="e.g., Maria K.">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-element">
+                                        <label for="review-title">Review Title / Drink Ordered</label>
+                                        <input type="text" id="review-title" placeholder="e.g., Creamy Brown Sugar!">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-element">
+                                        <label for="review-content">Your Review *</label>
+                                        <textarea id="review-content" rows="4" required placeholder="Tell us what you loved about your drink..."></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-4">
+                                            <button 
+                                                type="button" 
+                                                class="send-msg-btn"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#reviewModal">
+                                                Submit Review
+                                            </button>
+                                    </div>
+                                    <!-- REVIEW SUBMITTED MODAL -->
+<div class="modal fade" id="reviewModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 rounded-4" style="background-color: #FFFDF9;">
+
+            <div class="modal-body text-center py-5">
+
+                <i class="bi bi-check-circle-fill"
+                style="font-size: 70px; color: #D36B27;"></i>
+
+                <h4 class="fw-bold mt-3" style="color: #5C4033;">
+                    Review Submitted!
+                </h4>
+
+                <p class="text-muted mb-4">
+                    Thank you for sharing your feedback with YOGU.
+                </p>
+
+                <button 
+                    type="button"
+                    class="btn px-4 py-2"
+                    data-bs-dismiss="modal"
+                    style="background-color: #D36B27; color: white; border-radius: 30px; border: none;">
+                    Close
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-form-section py-5">
+        <div class="container">
+            <div class="contact-card-wrapper mx-auto">
+                <div class="row g-0">
+                    <div class="col-lg-5 contact-info-sidebar p-5 text-white d-flex flex-column justify-content-between">
+                        <div>
+                            <h3 class="fw-bold mb-3">Connect with yogu</h3>
+                            <p class="opacity-75 mb-4">Reach out to us for catering, events, or general franchise inquiries!</p>
+                            
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-envelope-fill me-3 fs-5"></i>
+                                <div>
+                                    <small class="d-block opacity-75">DMs & Business Inquiry</small>
+                                    <strong>hello@yogu-drinks.com</strong>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-instagram me-3 fs-5"></i>
+                                <div>
+                                    <small class="d-block opacity-75">Social Channel Handles</small>
+                                    <strong>@yogu_milktas</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-4 border-top border-white-50 opacity-75 small">
+                            We'd love to hear from you!
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7 p-5 bg-white">
+                        <h3 class="fw-bold mb-2" style="color: #4a2c11;">Get In Touch</h3>
+                        <p class="text-muted small mb-4">Fields marked with * are required</p>
+                        
+                        <form action="#" method="POST">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-element">
+                                        <label for="name">Your Name *</label>
+                                        <input type="text" id="name" required placeholder="John Doe">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-element">
+                                        <label for="email">Your Email *</label>
+                                        <input type="email" id="email" required placeholder="john@example.com">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-element">
+                                        <label for="message">Your Message *</label>
+                                        <textarea id="message" rows="4" required placeholder="Write your message here..."></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button 
+                                        type="button"
+                                        class="btn btn-primary w-100 py-3 fw-bold"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#messageModal"
+                                        style="background-color: #D36B27; border: none; border-radius: 12px;">
+                                        Send Message
+                                    </button>
+                                </div>   
+                                
+                                <!-- MESSAGE SENT MODAL -->
+                                <div class="modal fade" id="messageModal" tabindex="-1" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content border-0 rounded-4" style="background-color: #FFFDF9;">
+
+                                            <div class="modal-body text-center py-5">
+
+                                                <i class="bi bi-check-circle-fill"
+                                                style="font-size: 70px; color: #D36B27;"></i>
+
+                                                <h3 class="fw-bold mt-3" style="color: #5C4033;">
+                                                    Message Sent!
+                                                </h3>
+
+                                                <p class="text-muted mb-4">
+                                                    Thank you for contacting YOGU.
+                                                </p>
+
+                                                <button 
+                                                    type="button"
+                                                    class="btn px-4 py-2"
+                                                    data-bs-dismiss="modal"
+                                                    style="background-color: #D36B27; color: white; border: none; border-radius: 30px;">
+                                                    Close
+                                                </button>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-5" style="background-color: #EFE6DC; color: #5C4033;">
+        <div class="container text-center text-md-start">
+            <div class="row g-4">
+                <div class="col-md-4 text-center text-md-start">
+                    <img src="YogoLogo.png" alt="yogu" style="height: 50px;" class="mb-2">
+                    <p class="small text-muted">Yogurt ice cream milk tea and drinks. Sweet little treats designed for daily dynamic comfort.</p>
+                </div>
+                <div class="col-md-4 ps-md-5">
+                    <h6 class="text-uppercase small fw-bold mb-3" style="color: #D36B27;">Explore</h6>
+                    <ul class="list-unstyled d-flex gap-3 justify-content-center justify-content-md-start small">
+                        <li><a href="index.html" class="text-decoration-none" style="color: #5C4033;">Home</a></li>
+                        <li><a href="products.html" class="text-decoration-none" style="color: #5C4033;">Menu</a></li>
+                        <li><a href="about.html" class="text-decoration-none" style="color: #5C4033;">About</a></li>
+                        <li><a href="reviews.html" class="text-decoration-none" style="color: #5C4033;">Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="text-uppercase small fw-bold mb-3" style="color: #D36B27;">Socials</h6>
+                    <div class="d-flex gap-3 justify-content-center justify-content-md-start">
+                        <a href="https://www.facebook.com/profile.php?id=61550322911178" style="color: #5C4033;"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="https://www.instagram.com/yogu_milktea/" style="color: #5C4033;"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="https://www.tiktok.com/@yogu_milktea" style="color: #5C4033;"><i class="bi bi-tiktok fs-5"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4" style="border-color: #DCCFBF;">
+            <p class="text-center small text-muted mb-0">© 2023 yogu. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
